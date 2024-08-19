@@ -9,6 +9,6 @@ int main(){
   cout<<&ptr<<endl;
   cout<<*ptr1<<endl;
   cout<<**ptr1;
-  cout<<"Address of n: "<<&n<<endl;
+  cout<<"Addres of n: "<<&n<<endl;
   
 }

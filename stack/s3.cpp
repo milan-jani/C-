@@ -61,7 +61,7 @@ class stack{
 
 int main(){
      
-    string str="I like cofee";
+    string str="i like cofee";
     cout<<str;
     stack s(str.length());
     for(int i=0;i<str.length();i++){
@@ -81,9 +81,9 @@ int main(){
             cout<<" ";
             }
         }
-        cout<<temp.peek();
+        
         //this loop bcz after adding coffee to stack it dosent find any space so manuallly we have to print the remaining or last word
-        while(!s.isempty()){
+        while(!temp.isempty()){
             cout<<temp.pop();
         }
             

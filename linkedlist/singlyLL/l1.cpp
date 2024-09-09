@@ -65,7 +65,7 @@ class linkedlist{
     int search(int data){
          if(head==nullptr){
             cout<<"The LinkedList does not Exist."<<endl;
-            return;
+            return 0;
         }
         node* temp=head;
         while(temp!=nullptr){
@@ -78,7 +78,20 @@ class linkedlist{
         return -1;
     }
 
-    
+    // Function to split the LinkedList into two sub-LinkedLists (odd and even)
+    void splitOddEven(linkedlist& oddList, linkedlist& evenList) {
+        node* temp = head;
+        while (temp) {
+            if (temp->data % 2 == 0) {
+                // Even node
+                evenList.insert_end(temp->data);
+            } else {
+                // Odd node
+                oddList.insert_end(temp->data);
+            }
+            temp = temp->next;
+        }
+    }
 };
 
   
@@ -97,12 +110,18 @@ class linkedlist{
     cout<<"enter element to be search:"<<endl;
     int element;
     cin>>element;
-//     int r=list.search(element);
-//    if(r==1)
-//    cout<<"element found";
-//    else   cout<<"element not found";
-  if(list.search(element)==-1)   cout<<"Element not found";
-  else  cout<<"Element found";
-    return 0;
+    if(list.search(element)==-1)   cout<<"Element not found";
+    else  cout<<"Element found";
 
+    // Split the LinkedList into two sub-LinkedLists (odd and even)
+    linkedlist oddList, evenList;
+    list.splitOddEven(oddList, evenList);
+
+    cout << "Odd LinkedList: " << endl;
+    oddList.display();
+
+    cout << "Even LinkedList: " << endl;
+    evenList.display();
+
+    return 0;
   }

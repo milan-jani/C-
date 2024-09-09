@@ -1,4 +1,4 @@
-//take two list which are sorted and merde in new linkedlist
+//take two list which are sorted and merge in new linkedlist
 
 #include<iostream>
 using namespace std;

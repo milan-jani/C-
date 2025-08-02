@@ -61,6 +61,7 @@ class stack{
 int main(){
      
     string str="I like cofee";
+    cout<<str<<endl;
     stack s(str.length());
    //  cout<<str.length();
     for(auto c:str){

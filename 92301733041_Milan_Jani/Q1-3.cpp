@@ -55,14 +55,19 @@ class stack{
 
     }
 
-    void display(){
-        for(int i=top;i>=0;i--){
-            cout<<arr[i]<<" ";
+  
 
-    }
+    void display(int top){
+        if(top==0)
+        display(top--);
+        
+        cout<<arr[top];
+        
     
     } 
-
+   int gettop(){
+    return top;
+   }
 
 
 };
@@ -85,8 +90,9 @@ main(){
     s.pop();
     cout<<s.peak()<<endl;
     s.push(5);
-    //array reverse
-    s.display(); 
+    cout<<"in reverse"<<endl;
+    int x=s.gettop();
+    s.display(x);
     cout<<endl;   
   
 
